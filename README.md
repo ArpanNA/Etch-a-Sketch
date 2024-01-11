@@ -46,3 +46,8 @@ Acknowledgments
     Special thanks to the GitHub community.
 
 Enjoy drawing with the Etch-a-Sketch!
+
+
+DISCLAIMER!!!!
+
+(There may be functions that are not working and sorry for that I am just frustrated after working and finding solution that will work I will try to improve )
