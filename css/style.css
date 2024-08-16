@@ -118,6 +118,10 @@ p {
   margin-left: 20px;
   box-shadow: 0 10px 10px black;
 }
+#rnd input {
+  width: 75px;
+  height: 35px;
+}
 #rnd:hover {
   transform: scale(1.2);
 }
@@ -170,7 +174,7 @@ p {
 
 .cell {
   background-color: white;
-  border: 1px solid black;
+  /* border:  rgb(255, 255, 255); */
 }
 footer {
   background-color: black;

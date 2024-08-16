@@ -6,6 +6,9 @@ createGrid = () => {
     div.classListener("mouseover", function (event) {
       event.target.style.backgroundColor = "black";
     });
+    div.classListener("mousedown", function (event) {
+      event.target.style.backgroundColor = "black";
+    });
     grid.appendChild(div);
   }
 };
@@ -87,15 +90,24 @@ black.addEventListener("click", function () {
 });
 
 const rnd = document.querySelector("#rnd");
-rnd.addEventListener("input", function () {
-  let val = document.getElementById("slider").value;
-  let newColor = document.getElementById("color").value;
-  let cell = grid.children;
-  for (let i = 0; i < val * val; i++) {
-    cell[i].addEventListener("mouseover", function (event) {
-      event.target.style.backgroundColor = newColor;
-    });
-  }
+rnd.addEventListener("click", function () {
+  // Create a new input element
+  const pallet = document.createElement("input");
+  pallet.classList.add("color-panel");
+  pallet.type = "color";
+  pallet.value = "#333333";
+
+  document.body.appendChild(pallet);
+
+  pallet.addEventListener("input", function () {
+    let newColor = pallet.value;
+    let cell = grid.children;
+    for (let i = 0; i < val * val; i++) {
+      cell[i].addEventListener("mouseover", function (event) {
+        event.target.style.backgroundColor = newColor;
+      });
+    }
+  });
 });
 
 createGrid();
